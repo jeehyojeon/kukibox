@@ -1,0 +1,42 @@
+.aud_intro{
+  text-align: center;
+  display: flex;
+  color: #75BEDA;
+  width: 750px;
+  height: 1624px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.aud_intro .aud_intro_title {
+  color: #623B1C;
+  text-align: center;
+  @font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  font-size: 96.154px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 2.885px;
+}
+
+.aud_intro .aud_intro_subtitle {
+  color: #F6EDDD;
+  text-align: center;
+  @font-face {
+    font-family: 'LOTTERIACHAB';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/LOTTERIACHAB.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  font-size: 38.462px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.154px;
+}
