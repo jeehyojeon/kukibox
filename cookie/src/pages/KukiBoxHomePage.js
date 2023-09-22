@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./KukiBoxHomePage.css";
 import { useParams } from "react-router-dom";
+import Kuki from "../components/Kuki/Kuki";
 
 function KukiBoxHomePage() {
   const { boxId } = useParams();
@@ -22,7 +23,7 @@ function KukiBoxHomePage() {
       <div className="kukibox_section">
         <div className="kukibox">
           {kukies.map((kuki) => (
-            <div key={`kuki` + kuki.id}>kuki {kuki.id}</div>
+            <Kuki key={`kuki` + kuki.id} style={Number(kuki.id) % 6}></Kuki>
           ))}
         </div>
         <div className="kukibox_button">

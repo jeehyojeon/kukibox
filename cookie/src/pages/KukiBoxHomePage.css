@@ -36,6 +36,8 @@
     width: 260px;
     height: 494px;
 
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .kukibox_button {
