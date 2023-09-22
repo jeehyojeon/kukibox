@@ -24,7 +24,14 @@
   align-items: center;
   justify-content: center;
 }
-
+.maker_home_subbox{
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+  position: absolute;
+}
 .maker_intro .maker_intro_title {
   color: #75BEDA;
   text-align: center;

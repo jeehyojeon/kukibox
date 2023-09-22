@@ -1,0 +1,87 @@
+@font-face {
+  font-family: 'LotteriaChab';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.ttf') format("truetype");
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'HSYeolumMulbit';
+  src: url('HSYeolumMulbit.ttf');
+}
+
+.maker_home {
+  text-align: center;
+  display: flex;
+  background: #F6EDDD80;
+  width: 390px;
+  height: 844px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.maker_home_title {
+  color: #623B1C;
+text-align: center;
+font-family: HSYeolumMulbit;
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.9px;
+}
+.maker_home_name {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+}
+.maker_home_namebox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+}
+.maker_home_link {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+}
+.maker_home_linkbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+}
+.maker_home_option {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+}
+.maker_home_linkbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+}
