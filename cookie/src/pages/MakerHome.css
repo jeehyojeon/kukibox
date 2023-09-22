@@ -24,16 +24,7 @@
   align-items: center;
   justify-content: center;
 }
-.maker_home_title {
-  color: #623B1C;
-text-align: center;
-font-family: HSYeolumMulbit;
-font-size: 30px;
-font-style: normal;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.9px;
-}
+
 .maker_home_name {
   color: #623B1C;
   text-align: center;
@@ -51,6 +42,28 @@ letter-spacing: 0.9px;
   border-radius: 20px;
   background: #CAAD8C;
 }
+.maker_home_linkbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+}
+.maker_home_optionbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #CAAD8C;
+}
+.maker_home_enrollbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #75BEDA;
+  
+}
 .maker_home_link {
   color: #623B1C;
   text-align: center;
@@ -60,13 +73,6 @@ letter-spacing: 0.9px;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
-}
-.maker_home_linkbox {
-  width: 268px;
-  height: 55px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #CAAD8C;
 }
 .maker_home_option {
   color: #623B1C;
@@ -78,10 +84,17 @@ letter-spacing: 0.9px;
   line-height: normal;
   letter-spacing: 0.45px;
 }
-.maker_home_linkbox {
-  width: 268px;
-  height: 55px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #CAAD8C;
+
+.maker_home_enroll {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  position: absolute;
+  top: 672px;
+  margin: 0;
 }

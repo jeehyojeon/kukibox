@@ -12,7 +12,8 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.9px;
-
   white-space: pre-line;
+  position: absolute;
+  top: 140px;
 }
 
