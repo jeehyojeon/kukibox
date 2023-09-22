@@ -3,6 +3,7 @@ import "./App.css";
 
 import MakerHome from "./pages/MakerHome.js";
 import AudIntro from "./pages/AudIntro";
+import MakerIntro from "./pages/MakerIntro";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -11,8 +12,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          {/* <Route path="/" element={<AudIntro />} /> */}
           <Route path="/" element={<MakerHome />} />
+          <Route path="/audintro" element={<AudIntro />} />
+          <Route path="/makerintro" element={<MakerIntro />} />
         </Routes>
       </BrowserRouter>
     </div>

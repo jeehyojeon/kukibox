@@ -1,13 +1,12 @@
 import React from "react";
+import Title from "../components/Title/Title";
 import "./MakerHome.css";
 
 function MakerHome() {
   return (
     <div className="maker_home">
-      <div className="maker_home_title">
-        공연 정보 작성
-        <br />*
-      </div>
+      <Title title={`공연 정보 작성\n*`} />
+      <br />
       <div className="maker_home_name">공연 이름</div>
       <div className="maker_home_namebox"></div>
       <div className="maker_home_link">링크 첨부</div>
