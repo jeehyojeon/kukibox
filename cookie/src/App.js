@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import AudIntro from "./AudIntro";
+import MakerIntro from "./MakerIntro";
 
 function App() {
   return (
     <div className="App">
-      <AudIntro />
+      <MakerIntro />
     </div>
   );
 }

@@ -1,0 +1,57 @@
+@font-face {
+  font-family: 'LotteriaChab';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.ttf') format("truetype");
+  font-display: swap;
+} 
+@font-face {
+  font-family: 'HSYeolumMulbit';
+  src: url('HSYeolumMulbit.ttf');
+}
+
+.maker_intro{
+  text-align: center;
+  display: flex;
+  background: #623B1C;
+  width: 390px;
+  height: 844px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maker_intro .maker_intro_title {
+  color: #75BEDA;
+  text-align: center;
+  font-family: 'LOTTERIACHAB';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.8px;
+  text-shadow: -1px 0 #F6EDDD, 0 1px #F6EDDD, 1px 0 #F6EDDD, 0 -1px #F6EDDD;
+  position: relative;
+  top: 140px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 234px;
+  height: 86px;
+}
+
+.maker_intro .maker_intro_subtitle {
+  color:white;
+  text-align: center;
+  font-family: 'HSYeolumMulbit';
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.39px;
+}
