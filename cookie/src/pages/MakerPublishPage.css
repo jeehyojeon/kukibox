@@ -1,0 +1,69 @@
+@font-face {
+  font-family: 'HSYeolumMulbit';
+  src: url('../assets/fonts/HSYeolumMulbit.ttf');
+}
+@font-face {
+  font-family: 'HSYuji-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/HSYuji-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.maker_qr {
+  margin:0;
+  padding:0;
+  border:0;
+  text-align: center;
+  display: flex;
+  background: #CAAD8C;
+  width: 390px;
+  height: 844px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.maker_qr_title {
+  color: #F6EDDD;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  white-space: pre-line;
+  position: absolute;
+  top: 100px;
+}
+
+.maker_download {
+  color: #F6EDDD;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  white-space: pre-line;
+  position: absolute;
+  top: 700px;
+}
+.maker_qrbox {
+  width: 351px;
+  height: 482px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #F6EDDD;
+}
+
+.maker_downloadbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #623B1C;
+  position: absolute;
+  top: 0px;
+}

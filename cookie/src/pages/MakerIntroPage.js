@@ -1,9 +1,9 @@
 import React from "react";
-import "./MakerIntro.css";
+import "./MakerIntroPage.css";
 import MakerIntroKuki from "../assets/images/kuki1.svg";
 import MakerIntroBox from "../assets/images/MakerIntroBox.svg";
 
-function MakerIntro() {
+function MakerIntroPage() {
   const kukipos = {
     position: "absolute",
     top: "50px",
@@ -32,4 +32,4 @@ function MakerIntro() {
   );
 }
 
-export default MakerIntro;
+export default MakerIntroPage;
