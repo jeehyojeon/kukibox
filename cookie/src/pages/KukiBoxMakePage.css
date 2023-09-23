@@ -1,0 +1,51 @@
+.page {
+    width: 390px;
+    height: 844px;
+    background: #49260A;
+}
+
+.page_header {
+    margin-top: 56px;
+
+    color: #F6EDDD;
+    text-align: center;
+    font-family: HSYuJi;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.75px;
+}
+
+.design_section {
+    margin-top: 25px;
+
+    width: 390px;
+    height: 224px;
+
+    background-color: red;
+}
+
+.content_section {
+    margin-top: 32px;
+    margin-left: 25px;
+
+    width: 340px;
+    height: 320px;
+
+    background-color: #F6EDDD;
+}
+
+.public_section {
+    margin-top: 13px;
+
+    height: 20px;
+
+    background-color: white;
+}
+
+.public_section {
+    margin-top: 11px;
+
+    background-color: aqua;
+}
