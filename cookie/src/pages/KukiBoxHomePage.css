@@ -41,6 +41,7 @@
 }
 
 .kukibox_button {
+    margin-top: 8px;
     padding-left: 105px;
     padding-right: 105px;
 
@@ -52,8 +53,6 @@
     width: 50px;
     height: 50px;
     flex-shrink: 0;
-
-    background-image: url('../assets//images//LeftButton.svg');
     
     border: none;
     background-color: transparent;
@@ -61,10 +60,13 @@
     background-size: contain;
 }
 
-.kukibox_button .right_button {
-    transform: rotate(180deg);
+.kukibox_button .left_button {
+    background-image: url('../assets/images/LeftButton.svg');
 }
 
+.kukibox_button .right_button {
+    background-image: url('../assets/images/RightButton.svg');
+}
 
 
 .make_button_section {
@@ -89,4 +91,14 @@
 
     border-radius: 20px;
     border: 0px solid;
+
+    
+}
+
+.hoverable {
+    transition: transform 0.3s ease;
+}
+
+.hoverable:hover {
+    transform: scale(1.1);
 }

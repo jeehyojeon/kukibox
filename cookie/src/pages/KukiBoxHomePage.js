@@ -27,12 +27,12 @@ function KukiBoxHomePage() {
           ))}
         </div>
         <div className="kukibox_button">
-          <button className="left_button"></button>
-          <button className="right_button"></button>
+          <button className="left_button hoverable"></button>
+          <button className="right_button hoverable"></button>
         </div>
       </div>
       <div className="make_button_section">
-        <button className="make_button">쿠키 담기</button>
+        <button className="make_button hoverable">쿠키 담기</button>
       </div>
     </div>
   );
