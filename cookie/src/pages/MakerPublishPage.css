@@ -9,61 +9,69 @@
   font-style: normal;
 }
 
-.maker_qr {
-  margin:0;
-  padding:0;
-  border:0;
-  text-align: center;
-  display: flex;
-  background: #CAAD8C;
+.page {
   width: 390px;
   height: 844px;
+
+  display: flex;
   flex-direction: column;
+
+  background-color: #caad8c!important;
   align-items: center;
-  justify-content: center;
 }
 
-.maker_qr_title {
-  color: #F6EDDD;
-  text-align: center;
-  font-family: HSYeolumMulbit;
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.9px;
-  white-space: pre-line;
-  position: absolute;
-  top: 100px;
-}
-
-.maker_download {
-  color: #F6EDDD;
-  text-align: center;
-  font-family: HSYeolumMulbit;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.9px;
-  white-space: pre-line;
-  position: absolute;
-  top: 700px;
-}
 .maker_qrbox {
   width: 351px;
   height: 482px;
   flex-shrink: 0;
+
   border-radius: 20px;
-  background: #F6EDDD;
+  background: #f6eddd;
+
+  position: absolute;
+  top: 180px;
 }
 
 .maker_downloadbox {
   width: 268px;
   height: 55px;
   flex-shrink: 0;
+
   border-radius: 20px;
   background: #623B1C;
+  
   position: absolute;
-  top: 0px;
+  top: 720px;
+
+  z-index: 1;
+}
+
+.maker_qr_title {
+  color: #F6EDDD;
+  text-align: center;
+  font-family: 'HSYeolumMulbit';
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
+
+  position: absolute; 
+  top: 110px;
+}
+
+.maker_download {
+  color: #F6EDDD;
+  text-align: center;
+  font-family: 'HSYeolumMulbit';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.6px;
+
+  position: absolute;
+  top: 730px;
+
+  z-index: 2;
 }
