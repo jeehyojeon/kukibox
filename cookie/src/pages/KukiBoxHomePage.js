@@ -10,13 +10,10 @@ function KukiBoxHomePage() {
   const navigate = useNavigate();
 
   const { authId } = useAuth();
-  console.log(authId, boxId);
 
   const [kukies, setKukies] = useState([]);
   const [curBox, setCurBox] = useState(0);
   const [selected, setSelected] = useState(null);
-
-  console.log(kukies);
 
   useEffect(() => {
     const getKukiList = async () => {
