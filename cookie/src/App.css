@@ -11,3 +11,15 @@
 .hoverable:hover {
   transform: scale(1.1);
 }
+
+@font-face {
+  font-family: 'HSYuJi';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.eot?#iefix') format('embedded-opentype'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.woff2') format('woff2'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.woff') format('woff'),
+       url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.ttf') format("truetype");
+  font-display: swap;
+}
