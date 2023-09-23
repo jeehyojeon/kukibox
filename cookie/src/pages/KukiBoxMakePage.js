@@ -36,7 +36,8 @@ function KukiBoxMakePage() {
       }),
     });
 
-    console.log(res);
+    // onboarding
+    // navigate to home
   };
 
   return (
