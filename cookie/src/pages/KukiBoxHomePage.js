@@ -61,7 +61,7 @@ function KukiBoxHomePage() {
   };
 
   return (
-    <div className="KukiBoxHomePage page">
+    <div className="KukiBoxHomePage">
       <div className="kukibox_section">
         <div className="kukibox">
           {kukies.map((kuki) => (
