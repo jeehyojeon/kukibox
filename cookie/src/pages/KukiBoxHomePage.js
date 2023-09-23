@@ -15,19 +15,17 @@ function KukiBoxHomePage() {
       const data = await response.json();
 
       setKukies([...data]);
-
-      const res2 = await fetch(`http://localhost:3030/kuki/${1}`);
-      const data2 = await res2.json();
-      setSelected({ ...data2[0] });
     };
 
     getKukiList();
   }, [boxId]);
-  console.log(selected);
 
-  const onKukiClick = (kuki) => {
-    setSelected(Number(kuki));
-    console.log(selected);
+  const onKukiClick = async (kukiId) => {
+    const response = await fetch(`http://localhost:3030/kuki/${kukiId}`);
+    const data = await response.json();
+    const kuki = data[0];
+
+    setSelected({ ...kuki });
   };
 
   const onKukiModalClose = () => {
@@ -39,11 +37,11 @@ function KukiBoxHomePage() {
       <div className="kukibox_section">
         <div className="kukibox">
           {kukies.map((kuki) => (
-            <Kuki
-              key={`kuki` + kuki.id}
-              style={Number(kuki.id) % 6}
-              onClick={() => onKukiClick(kuki.id)}
-            />
+            <div
+              key={`kuki_container` + kuki.id}
+              onClick={() => onKukiClick(kuki.id)}>
+              <Kuki key={`kuki` + kuki.id} style={Number(kuki.id) % 6} />
+            </div>
           ))}
         </div>
         <div className="kukibox_button">
