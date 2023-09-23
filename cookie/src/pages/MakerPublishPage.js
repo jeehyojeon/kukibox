@@ -6,21 +6,21 @@ import QRCode from "qrcode";
 function MakerPublishPage() {
   const [qrDataUrl, setQrDataUrl] = React.useState(null);
 
-  // useEffect(async () => {
-  //   async function generateQR(url) {
-  //     try {
-  //       const qrDataURL = await QRCode.toDataURL(url);
-  //       return qrDataURL;
-  //     } catch (err) {
-  //       console.error(err);
-  //       return null;
-  //     }
-  //   }
+  useEffect(async () => {
+    async function generateQR(url) {
+      try {
+        const qrDataURL = await QRCode.toDataURL(url);
+        return qrDataURL;
+      } catch (err) {
+        console.error(err);
+        return null;
+      }
+    }
 
-  //   const url = "https://localhost:3000/kuki/intro";
-  //   const qrDataUrl = await generateQR(url);
-  //   setQrDataUrl(qrDataUrl);
-  // }, []);
+    const url = "https://localhost:3000/kuki/intro";
+    const qrDataUrl = await generateQR(url);
+    setQrDataUrl(qrDataUrl);
+  }, []);
 
   return (
     <div className="MakerPublishPage">

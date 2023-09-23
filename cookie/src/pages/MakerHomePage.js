@@ -7,40 +7,38 @@ function MakerHome() {
   const params = useParams();
   const navigate = useNavigate();
 
-  const [title, setTitle] = useState("");
-  const [link, setLink] = useState("");
-  const [info, setInfo] = useState("");
-  
+  const [textInput, setTextInput] = useState({
+    title: "",
+    link: "",
+    info: "",
+  });
 
-  
   const onContentChange = (event) => {
-    setTitle(event.target.value);
-    setLink(event.target.value);
-    setInfo(event.target.value);  
+    const { name, value } = event.target;
+
+    setTextInput({
+      ...textInput,
+      [name]: value,
+    });
   };
 
-
   const onMakeClick = async () => {
-
-    const res = await fetch(`http://localhost:3030/kuki`, {
+    const res = await fetch(`http://localhost:3030/box`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        title: title,
-        link: link,
-        info: info,
+        title: textInput.title,
+        link: textInput.link,
+        info: textInput.info,
       }),
     });
 
-   
-
-
     // navigate to home after 2.5 seconds
-    setTimeout(() => {
-      navigate("/maker/publish");
-    }, 5500);
+    // setTimeout(() => {
+    //   navigate("/maker/publish");
+    // }, 5500);
   };
 
   return (
@@ -50,8 +48,9 @@ function MakerHome() {
       <div className="title_section">
         <textarea
           className="title_textarea"
+          name="title"
           placeholder="공연 이름을 작성하세요..."
-          value={title}
+          value={textInput.title}
           onChange={onContentChange}
         />
       </div>
@@ -59,8 +58,9 @@ function MakerHome() {
       <div className="link_section">
         <textarea
           className="link_textarea"
+          name="link"
           placeholder="공연 관련 링크를 첨부하세요..."
-          value={link}
+          value={textInput.link}
           onChange={onContentChange}
         />
       </div>
@@ -68,17 +68,16 @@ function MakerHome() {
       <div className="info_section">
         <textarea
           className="info_textarea"
+          name="info"
           placeholder="공연에 대한 추가적인 정보를 작성하세요..."
-          value={info}
+          value={textInput.info}
           onChange={onContentChange}
         />
       </div>
-            
-      <div className="button_section_hoverable">
+      <div className="button_section hoverable">
         <button onClick={onMakeClick}>등록하기</button>
       </div>
     </div>
-    
   );
 }
 

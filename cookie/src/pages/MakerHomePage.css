@@ -9,6 +9,11 @@
   justify-content: center;
 }
 
+.MakerHomePage textarea {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
 .page_header {
   color: #623B1C!important;
   text-align: center;
@@ -109,7 +114,6 @@
   background: #CAAD8C;
   position: absolute;
   top: 396px;
-
 }
 
 .info_section textarea {
@@ -124,8 +128,6 @@
 .info_section textarea:focus {
   outline: none;
 }
-
-
 
 .button_section {
   width: 268px;
