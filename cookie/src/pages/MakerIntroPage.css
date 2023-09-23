@@ -15,29 +15,23 @@
 }
 
 .maker_intro{
-  text-align: center;
-  display: flex;
+  width: 390px;
+  height: 844px;
+
   background: #623B1C;
-  width: 100vw;
-  height: 100vh;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
 }
 
-.maker_home_subbox{
-  width: 111px;
-  height: 26px;
-  flex-shrink: 0;
-  border-radius: 50px;
-  background: #F6EDDD;
-  position: absolute;
-  top: 241px;
+.maker_intro_title {
+  margin-top: 140px;
 
-}
-.maker_intro .maker_intro_title {
+  width: 248px;
+  height: 86px;
+
   color: #75BEDA;
-  text-align: center;
   font-family: 'LOTTERIACHAB';
   font-size: 60px;
   font-style: normal;
@@ -45,19 +39,49 @@
   line-height: normal;
   letter-spacing: 1.8px;
   text-shadow: -3px 0 #F6EDDD, 0 3px #F6EDDD, 3px 0 #F6EDDD, 0 -3px #F6EDDD;
-  position: absolute; 
-  top: 140px;
 }
 
+.maker_intro_kuki {
+  position: relative;
+
+  top: -44px;
+  left: 210px;
+
+  width: 50px;
+  height: 50px;
+
+  background-image: url('../assets/images/kuki1_front.svg');
+  background-size: contain;
+}
+
+
+
 .maker_intro_subtitle {
-  color:white;
-  text-align: center;
-  font-family: 'HSYeolumMulbit';
+  margin-top: 15px;
+
+  width: 111px;
+  height: 26px;
+
+  border-radius: 50px;
+  background: #F6EDDD;
+
+  color:#623B1C;
+  font-family: HSYeolumMulbit;
   font-size: 13px;
   font-style: normal;
   font-weight: 700;
-  line-height: normal;
   letter-spacing: 0.39px;
-  position: absolute;
-  top: 241px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maker_intro_box {
+  margin-top: 130px;
+
+  width: 300px;
+  height: 300px;
+
+  background-image: url('../assets/images/MakerIntroBox.svg');
 }

@@ -9,6 +9,7 @@ function KukiBoxHomePage() {
   const navigate = useNavigate();
 
   const [kukies, setKukies] = useState([]);
+  const [curBox, setCurBox] = useState(0);
   const [selected, setSelected] = useState(null);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ function KukiBoxHomePage() {
         isFlipped: false,
       }));
 
-      setKukies([...kukies].slice(0, 8));
+      setKukies([...kukies]);
     };
 
     getKukiList();
@@ -55,6 +56,18 @@ function KukiBoxHomePage() {
     setSelected(null);
   };
 
+  const onRightClick = () => {
+    if (curBox + 1 > Math.ceil((kukies.length - 1) / 8)) return;
+
+    setCurBox(curBox + 1);
+  };
+
+  const onLeftClick = () => {
+    if (curBox - 1 > 0) return;
+
+    setCurBox(curBox - 1);
+  };
+
   const onKukiMakeClick = () => {
     // route to '/kukibox/${boxId}/make'
     navigate(`/kukibox/${boxId}/make`);
@@ -64,7 +77,7 @@ function KukiBoxHomePage() {
     <div className="KukiBoxHomePage">
       <div className="kukibox_section">
         <div className="kukibox">
-          {kukies.map((kuki) => (
+          {kukies.slice(curBox * 8, (curBox + 1) * 8).map((kuki) => (
             <div
               key={`kuki_container` + kuki.id}
               onClick={() => onKukiClick(kuki.id)}>
@@ -77,8 +90,14 @@ function KukiBoxHomePage() {
           ))}
         </div>
         <div className="kukibox_button">
-          <button className="left_button hoverable"></button>
-          <button className="right_button hoverable"></button>
+          <button
+            className="left_button hoverable"
+            onClick={onLeftClick}></button>
+          {kukies.length &&
+            `${curBox + 1} / ${Math.ceil((kukies.length - 1) / 8)}`}
+          <button
+            className="right_button hoverable"
+            onClick={onRightClick}></button>
         </div>
       </div>
       <div className="make_button_section">
