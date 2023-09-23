@@ -1,11 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "./KukiBoxHomePage.css";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Kuki from "../components/Kuki/Kuki";
 import KukiModal from "../components/KukiModal/KukiModal";
 
 function KukiBoxHomePage() {
   const { boxId } = useParams();
+  const navigate = useNavigate();
+
   const [kukies, setKukies] = useState([]);
   const [selected, setSelected] = useState(null);
 
@@ -53,6 +55,11 @@ function KukiBoxHomePage() {
     setSelected(null);
   };
 
+  const onKukiMakeClick = () => {
+    // route to '/kukibox/${boxId}/make'
+    navigate(`/kukibox/${boxId}/make`);
+  };
+
   return (
     <div className="KukiBoxHomePage page">
       <div className="kukibox_section">
@@ -75,7 +82,9 @@ function KukiBoxHomePage() {
         </div>
       </div>
       <div className="make_button_section">
-        <button className="make_button hoverable">쿠키 담기</button>
+        <button className="make_button hoverable" onClick={onKukiMakeClick}>
+          쿠키 담기
+        </button>
       </div>
       {selected && <KukiModal kuki={selected} onClose={onKukiModalClose} />}
     </div>
