@@ -57,12 +57,32 @@
     margin-top: 13px;
 
     height: 20px;
-
-    background-color: white;
 }
 
 .public_section {
-    margin-top: 11px;
+    margin-top: 16px;
 
-    background-color: aqua;
+    width: 380px;
+}
+
+.public_section input {
+    margin-left: 145px;
+
+    width: 16px;
+    height: 16px;
+
+    background-color: #F6EDDD;
+    border: none;
+}
+
+.public_section span {
+    margin-left: 32px;
+
+    color: #FFF;
+    text-align: center;
+    font-family: HSYuji;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }

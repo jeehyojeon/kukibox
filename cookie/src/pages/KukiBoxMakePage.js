@@ -4,9 +4,14 @@ import "./KukiBoxMakePage.css";
 
 function KukiBoxMakePage() {
   const [content, setContent] = useState("");
+  const [isPrivate, setIsPrivate] = useState(false);
 
   const onContentChange = (event) => {
     setContent(event.target.value);
+  };
+
+  const onTogglePrivate = () => {
+    setIsPrivate(!isPrivate);
   };
 
   return (
@@ -21,7 +26,10 @@ function KukiBoxMakePage() {
           onChange={onContentChange}
         />
       </div>
-      <div className="public_section"></div>
+      <div className="public_section">
+        <input type="checkbox" checked={isPrivate} onChange={onTogglePrivate} />
+        <span>비공개 여부</span>
+      </div>
       <div className="button_section"></div>
     </div>
   );
