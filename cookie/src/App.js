@@ -15,10 +15,10 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/maker/" element={<MakerHomePage />} />
           <Route path="/maker/intro" element={<MakerIntroPage />} />
+          <Route path="/maker/" element={<MakerHomePage />} />
           <Route path="/maker/publish/:boxId" element={<MakerPublishPage />} />
-          <Route path="/kukibox/intro" element={<KukiIntroPage />} />
+          <Route path="/kukibox/:boxId/intro" element={<KukiIntroPage />} />
           <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
           <Route path="/kukibox/:boxId/make" element={<KukiBoxMakePage />} />
         </Routes>

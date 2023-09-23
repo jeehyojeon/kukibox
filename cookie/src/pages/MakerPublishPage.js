@@ -1,25 +1,25 @@
 import React, { useEffect } from "react";
 import "./MakerPublishPage.css";
 
-import QRCode from "qrcode";
+import { useParams } from "react-router-dom";
+import { generateQR } from "../utils/generateQR";
 
 function MakerPublishPage() {
+  const params = useParams();
+
   const [qrDataUrl, setQrDataUrl] = React.useState(null);
 
-  useEffect(async () => {
-    async function generateQR(url) {
-      try {
-        const qrDataURL = await QRCode.toDataURL(url);
-        return qrDataURL;
-      } catch (err) {
-        console.error(err);
-        return null;
-      }
-    }
+  useEffect(() => {
+    const setKukiBoxUrl = async () => {
+      const { boxId } = params;
+      if (!boxId) return;
 
-    const url = "https://localhost:3000/kuki/intro";
-    const qrDataUrl = await generateQR(url);
-    setQrDataUrl(qrDataUrl);
+      const url = `https://localhost:3000/kukibox/${boxId}/intro`;
+      const qrDataUrl = await generateQR(url);
+      setQrDataUrl(qrDataUrl);
+    };
+
+    setKukiBoxUrl();
   }, []);
 
   return (
@@ -39,7 +39,10 @@ function MakerPublishPage() {
           </div>
         </div>
         <div className="maker_qrbox">
-          <div className="maker_qr"></div>
+          <div className="maker_qr">
+            <img src={qrDataUrl} />
+            {/* 나중에 관계자용 qr발급해야함 */}
+          </div>
           <div className="maker_qr_text">제작자 열람용</div>
         </div>
         <div className="inquiry">
