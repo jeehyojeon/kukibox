@@ -1,3 +1,27 @@
+.onboarding-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.onboarding-content {
+    position: fixed;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+
+    transition: top 1s;
+}
+
+.centered {
+    top: 25%;
+}
+
 .onboarding-container {
     z-index: 1000;
 

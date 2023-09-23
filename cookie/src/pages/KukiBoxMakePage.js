@@ -4,6 +4,7 @@ import "./KukiBoxMakePage.css";
 
 import KukiDesign from "../components/KukiDesign/KukiDesign";
 import { useParams } from "react-router-dom";
+import Onboarding from "../components/Onboarding/Onboarding";
 
 function KukiBoxMakePage() {
   const params = useParams();
@@ -11,6 +12,8 @@ function KukiBoxMakePage() {
   const [content, setContent] = useState("");
   const [isPrivate, setIsPrivate] = useState(false);
   const [selected, setSelected] = useState(1);
+
+  const [isOnboarding, setIsOnboarding] = useState(false);
 
   const onContentChange = (event) => {
     setContent(event.target.value);
@@ -23,20 +26,22 @@ function KukiBoxMakePage() {
   const onMakeClick = async () => {
     const { boxId } = params;
 
-    const res = await fetch(`http://localhost:3030/kuki`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        box_id: boxId,
-        design: selected,
-        content,
-        is_private: isPrivate,
-      }),
-    });
+    // const res = await fetch(`http://localhost:3030/kuki`, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     box_id: boxId,
+    //     design: selected,
+    //     content,
+    //     is_private: isPrivate,
+    //   }),
+    // });
 
     // onboarding
+    setIsOnboarding(true);
+
     // navigate to home
   };
 
@@ -68,6 +73,7 @@ function KukiBoxMakePage() {
       <div className="button_section hoverable">
         <button onClick={onMakeClick}>쿠키 보내기</button>
       </div>
+      {isOnboarding && <Onboarding design={selected} />}
     </div>
   );
 }

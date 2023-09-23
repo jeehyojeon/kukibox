@@ -23,21 +23,26 @@ function Onboarding({ design = 1 }) {
   }, [isOn, isFlipped]);
 
   return (
-    <div className={`onboarding-container ${isFlipped ? "isFlipped" : ""}`}>
-      <img
-        className="front"
-        src={KUKI_FRONT[design]}
-        width={110}
-        height={110}
-        alt="kuki-front"
-      />
-      <img
-        className="back"
-        src={KUKI_BACK[design]}
-        width={110}
-        height={110}
-        alt="kuki-back"
-      />
+    <div className="onboarding">
+      <div className="onboarding-overlay"></div>
+      <div className={`onboarding-content ${isOn ? "centered" : ""} `}>
+        <div className={`onboarding-container ${isFlipped ? "isFlipped" : ""}`}>
+          <img
+            className="front"
+            src={KUKI_FRONT[design]}
+            width={110}
+            height={110}
+            alt="kuki-front"
+          />
+          <img
+            className="back"
+            src={KUKI_BACK[design]}
+            width={110}
+            height={110}
+            alt="kuki-back"
+          />
+        </div>
+      </div>
     </div>
   );
 }
