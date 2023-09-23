@@ -94,11 +94,3 @@
 
     
 }
-
-.hoverable {
-    transition: transform 0.3s ease;
-}
-
-.hoverable:hover {
-    transform: scale(1.1);
-}
