@@ -13,14 +13,30 @@ function KukiBoxHomePage() {
     const getKukiList = async () => {
       const response = await fetch(`http://localhost:3030/box/${boxId}/kukies`);
       const data = await response.json();
+      const kukies = data.map((kuki) => ({
+        ...kuki,
+        isFlipped: false,
+      }));
 
-      setKukies([...data]);
+      setKukies([...kukies]);
     };
 
     getKukiList();
   }, [boxId]);
 
   const onKukiClick = async (kukiId) => {
+    const newKukies = kukies.map((kuki) => {
+      if (kuki.id === kukiId) {
+        return {
+          ...kuki,
+          isFlipped: !kuki.isFlipped,
+        };
+      } else {
+        return kuki;
+      }
+    });
+    setKukies(newKukies);
+
     const response = await fetch(`http://localhost:3030/kuki/${kukiId}`);
     const data = await response.json();
     const kuki = data[0];
@@ -29,6 +45,11 @@ function KukiBoxHomePage() {
   };
 
   const onKukiModalClose = () => {
+    const newKukies = kukies.map((kuki) => ({
+      ...kuki,
+      isFlipped: false,
+    }));
+    setKukies(newKukies);
     setSelected(null);
   };
 
@@ -40,7 +61,11 @@ function KukiBoxHomePage() {
             <div
               key={`kuki_container` + kuki.id}
               onClick={() => onKukiClick(kuki.id)}>
-              <Kuki key={`kuki` + kuki.id} style={Number(kuki.id) % 6} />
+              <Kuki
+                key={`kuki` + kuki.id}
+                style={Number(kuki.id) % 6}
+                isFlipped={kuki.isFlipped}
+              />
             </div>
           ))}
         </div>
