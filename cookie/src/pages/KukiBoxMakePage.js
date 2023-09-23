@@ -25,7 +25,7 @@ function KukiBoxMakePage() {
       <div className="page_header">쿠키를 선택해 주세요!</div>
       <div className="design_section">
         {
-          [1, 2, 3, 4, 5].map((design) => (
+          [1, 2, 3, 4, 5, 6].map((design) => (
             <KukiDesign design={design} />
           )) /* TODO: design 선택 기능 */
         }

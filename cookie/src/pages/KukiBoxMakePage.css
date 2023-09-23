@@ -23,7 +23,12 @@
     width: 390px;
     height: 224px;
 
-    background-color: red;
+    padding-left: 25px;
+    padding-right: 25px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .content_section {

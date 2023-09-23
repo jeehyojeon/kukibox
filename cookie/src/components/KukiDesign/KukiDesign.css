@@ -9,6 +9,11 @@
     align-items: center;
 }
 
+
+.blank {
+    background-color: #75BEDA;
+}
+
 .kuki_design img {
     width: 80px;
     height: 80px;
