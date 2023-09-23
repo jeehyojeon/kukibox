@@ -14,6 +14,10 @@ function KukiBoxMakePage() {
     setIsPrivate(!isPrivate);
   };
 
+  const onMakeClick = () => {
+    // temp
+  };
+
   return (
     <div className="page">
       <div className="page_header">쿠키를 선택해 주세요!</div>
@@ -30,7 +34,9 @@ function KukiBoxMakePage() {
         <input type="checkbox" checked={isPrivate} onChange={onTogglePrivate} />
         <span>비공개 여부</span>
       </div>
-      <div className="button_section"></div>
+      <div className="button_section hoverable">
+        <button onClick={onMakeClick}>쿠키 보내기</button>
+      </div>
     </div>
   );
 }
