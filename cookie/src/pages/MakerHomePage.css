@@ -76,7 +76,7 @@
   border-radius: 20px;
   background: #CAAD8C;
   position: absolute;
-  top: 392px;
+  top: 396px;
 
 }
 
@@ -131,4 +131,12 @@
 input {
   background: transparent;
   border: none;
+}
+
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  
+  
 }

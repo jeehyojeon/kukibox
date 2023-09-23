@@ -20,7 +20,7 @@
   align-items: center;
 }
 
-.maker_qrbox {
+.qrbox {
   width: 351px;
   height: 482px;
   flex-shrink: 0;
@@ -30,6 +30,16 @@
 
   position: absolute;
   top: 180px;
+}
+
+.kuki_qrbox {
+  width: 300px;
+  height: 163px;
+  flex-shrink: 0;
+  background: #F5F1E9;
+
+  position: absolute;
+  top: 210px;
 }
 
 .maker_downloadbox {

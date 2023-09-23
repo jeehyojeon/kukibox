@@ -3,7 +3,7 @@ import "./App.css";
 
 import MakerHomePage from "./pages/MakerHomePage.js";
 import MakerIntroPage from "./pages/MakerIntroPage";
-import MakerPublishPage from "./pages/MakerPublishPage";
+import MakerPublishPage from "./pages/MakerPublishPage1";
 import KukiBoxHomePage from "./pages/KukiBoxHomePage";
 import KukiIntroPage from "./pages/KukiIntroPage";
 
