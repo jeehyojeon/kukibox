@@ -22,6 +22,13 @@ function MakerPublishPage() {
     setKukiBoxUrl();
   }, []);
 
+  const onDownloadClick = () => {
+    const downloadLink = document.createElement("a");
+    downloadLink.href = qrDataUrl;
+    downloadLink.download = "qr.png";
+    downloadLink.click();
+  };
+
   return (
     <div className="MakerPublishPage">
       <div className="title-section">
@@ -50,8 +57,8 @@ function MakerPublishPage() {
           <div>devbuzz@gmail.com</div>
         </div>
       </div>
-      <div className="maker_downloadbox">
-        <div>다운로드</div>
+      <div className="maker_downloadbox" onClick={onDownloadClick}>
+        다운로드
       </div>
     </div>
   );
