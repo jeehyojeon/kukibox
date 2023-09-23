@@ -1,16 +1,11 @@
 import React from "react";
-import "./KukiHomePage.css";
+import "./KukiIntroPage.css";
 
-function KukiHomePage() {
-
+function KukiIntroPage() {
   return (
     <div className="kuki_home">
-      <div className="kuki_subtitle">
-        공연 방명록 서비스
-      </div>
-      <div className="kuki_title">
-        쿠키박스
-      </div>
+      <div className="kuki_subtitle">공연 방명록 서비스</div>
+      <div className="kuki_title">쿠키박스</div>
       <div className="kuki_box">
         <div className="kuki_box_left"></div>
         <div className="kuki_box_right"></div>
@@ -24,4 +19,4 @@ function KukiHomePage() {
     </div>
   );
 }
-export default KukiHomePage;
+export default KukiIntroPage;
