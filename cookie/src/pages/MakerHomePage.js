@@ -35,10 +35,17 @@ function MakerHome() {
       }),
     });
 
-    // navigate to home after 2.5 seconds
-    // setTimeout(() => {
-    //   navigate("/maker/publish");
-    // }, 5500);
+    if (res.ok) {
+      alert("공연 정보가 등록되었습니다.");
+
+      // read res
+      const { data } = await res.json();
+      const { box_id } = data;
+
+      setTimeout(() => {
+        navigate("/maker/publish" + box_id);
+      }, 3000);
+    }
   };
 
   return (
