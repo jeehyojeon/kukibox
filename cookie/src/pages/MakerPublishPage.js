@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MakerPublishPage.css";
 
+import QRCode from "qrcode";
+
 function MakerPublishPage() {
+  const [qrDataUrl, setQrDataUrl] = React.useState(null);
+
+  // useEffect(async () => {
+  //   async function generateQR(url) {
+  //     try {
+  //       const qrDataURL = await QRCode.toDataURL(url);
+  //       return qrDataURL;
+  //     } catch (err) {
+  //       console.error(err);
+  //       return null;
+  //     }
+  //   }
+
+  //   const url = "https://localhost:3000/kuki/intro";
+  //   const qrDataUrl = await generateQR(url);
+  //   setQrDataUrl(qrDataUrl);
+  // }, []);
+
   return (
     <div className="MakerPublishPage">
       <div className="title-section">
@@ -9,7 +29,9 @@ function MakerPublishPage() {
       </div>
       <div className="qrbox">
         <div className="kuki_qrbox">
-          <div className="kuki_qr"></div>
+          <div className="kuki_qr">
+            <img src={qrDataUrl} />
+          </div>
           <div className="kuki_qr_text">
             <div>관객 배포용</div>
             <br />
