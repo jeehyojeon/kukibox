@@ -3,22 +3,31 @@ import "./KukiBoxHomePage.css";
 import { useNavigate, useParams } from "react-router-dom";
 import Kuki from "../components/Kuki/Kuki";
 import KukiModal from "../components/KukiModal/KukiModal";
+import { useAuth } from "../context/auth";
 
 function KukiBoxHomePage() {
   const { boxId } = useParams();
   const navigate = useNavigate();
 
+  const { authId } = useAuth();
+  console.log(authId, boxId);
+
   const [kukies, setKukies] = useState([]);
   const [curBox, setCurBox] = useState(0);
   const [selected, setSelected] = useState(null);
+
+  console.log(kukies);
 
   useEffect(() => {
     const getKukiList = async () => {
       const response = await fetch(`http://localhost:3030/box/${boxId}/kukies`);
       const data = await response.json();
       const kukies = data.map((kuki) => ({
-        ...kuki,
+        id: kuki.id,
+        design: kuki.design,
+        isPrivate: Boolean(kuki.is_private),
         isFlipped: false,
+        content: kuki.content,
       }));
 
       setKukies([...kukies]);
@@ -43,6 +52,8 @@ function KukiBoxHomePage() {
     const response = await fetch(`http://localhost:3030/kuki/${kukiId}`);
     const data = await response.json();
     const kuki = data[0];
+
+    if (kuki.is_private && authId !== boxId) return;
 
     setSelected({ ...kuki });
   };
@@ -83,8 +94,9 @@ function KukiBoxHomePage() {
               onClick={() => onKukiClick(kuki.id)}>
               <Kuki
                 key={`kuki` + kuki.id}
-                style={Number(kuki.id) % 6}
+                style={Number(kuki.design)}
                 isFlipped={kuki.isFlipped}
+                isPrivate={kuki.isPrivate}
               />
             </div>
           ))}

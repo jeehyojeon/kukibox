@@ -32,3 +32,11 @@
 .isFlipped .kuki-back {
     transform: rotateY(0deg); /* 정면 보기로 회전 */
 }
+
+.kuki-back-private {
+    padding-top: 40px;
+    padding-left: 20px;
+
+    color: white;
+    font-family: HSYuJi;
+}

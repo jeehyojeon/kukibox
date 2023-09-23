@@ -3,7 +3,7 @@ import "./Kuki.css";
 
 import { KUKI_BACK, KUKI_FRONT } from "../../assets/images/kuki.js";
 
-function Kuki({ style = 1, isFlipped = false, isPublic = true, content = "" }) {
+function Kuki({ style = 1, isFlipped = false, isPrivate = false }) {
   return (
     <div className={`kuki hoverable ${isFlipped ? "isFlipped" : ""}`}>
       <img
@@ -13,13 +13,18 @@ function Kuki({ style = 1, isFlipped = false, isPublic = true, content = "" }) {
         height={110}
         alt="kuki-front"
       />
-      <img
-        className="kuki-back"
-        src={KUKI_BACK[style]}
-        width={110}
-        height={110}
-        alt="kuki-back"
-      />
+      <div>
+        <img
+          className="kuki-back"
+          src={KUKI_BACK[style]}
+          width={110}
+          height={110}
+          alt="kuki-back"
+        />
+        {isPrivate && (
+          <div className="kuki-back kuki-back-private">{"비공개 쿠키"}</div>
+        )}
+      </div>
     </div>
   );
 }
