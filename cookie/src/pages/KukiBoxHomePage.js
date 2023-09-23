@@ -88,13 +88,17 @@ function KukiBoxHomePage() {
               />
             </div>
           ))}
+          {!kukies.length && (
+            <div className="first-kuki">첫 번째 쿠키를 담아주세요!</div>
+          )}
         </div>
         <div className="kukibox_button">
           <button
             className="left_button hoverable"
             onClick={onLeftClick}></button>
-          {kukies.length &&
-            `${curBox + 1} / ${Math.ceil((kukies.length - 1) / 8)}`}
+          {kukies.length
+            ? `${curBox + 1} / ${Math.ceil((kukies.length - 1) / 8)}`
+            : ""}
           <button
             className="right_button hoverable"
             onClick={onRightClick}></button>
