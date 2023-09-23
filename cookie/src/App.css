@@ -3,3 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.hoverable {
+  transition: transform 0.3s ease;
+}
+
+.hoverable:hover {
+  transform: scale(1.1);
+}
