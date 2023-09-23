@@ -3,11 +3,12 @@ import React, { useState } from "react";
 import "./KukiBoxMakePage.css";
 
 import KukiDesign from "../components/KukiDesign/KukiDesign";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Onboarding from "../components/Onboarding/Onboarding";
 
 function KukiBoxMakePage() {
   const params = useParams();
+  const navigate = useNavigate();
 
   const [content, setContent] = useState("");
   const [isPrivate, setIsPrivate] = useState(false);
@@ -42,7 +43,10 @@ function KukiBoxMakePage() {
     // onboarding
     setIsOnboarding(true);
 
-    // navigate to home
+    // navigate to home after 2.5 seconds
+    setTimeout(() => {
+      navigate("/kukibox/" + boxId);
+    }, 5500);
   };
 
   return (

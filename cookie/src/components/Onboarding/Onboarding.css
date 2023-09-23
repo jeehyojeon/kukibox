@@ -15,11 +15,11 @@
     transform: translateX(-50%);
     z-index: 1000;
 
-    transition: top 1s;
+    transition: top 0.5s;
 }
 
 .centered {
-    top: 25%;
+    top: 33%;
 }
 
 .onboarding-container {

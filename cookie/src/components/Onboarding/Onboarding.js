@@ -11,7 +11,7 @@ function Onboarding({ design = 1 }) {
   useEffect(() => {
     setTimeout(() => {
       setIsOn(true);
-    }, 1500);
+    }, 500);
   }, []);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ function Onboarding({ design = 1 }) {
       if (!isOn) return;
 
       setIsFlipped(!isFlipped);
-    }, 2000);
+    }, 1500);
   }, [isOn, isFlipped]);
 
   return (
