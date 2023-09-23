@@ -9,20 +9,28 @@ import KukiIntroPage from "./pages/KukiIntroPage";
 import KukiBoxMakePage from "./pages/KukiBoxMakePage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import AuthPage from "./pages/AuthPage";
+import AuthProvider from "./context/auth";
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/maker/intro" element={<MakerIntroPage />} />
-          <Route path="/maker/" element={<MakerHomePage />} />
-          <Route path="/maker/publish/:boxId" element={<MakerPublishPage />} />
-          <Route path="/kukibox/:boxId/intro" element={<KukiIntroPage />} />
-          <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
-          <Route path="/kukibox/:boxId/make" element={<KukiBoxMakePage />} />
-        </Routes>
-      </BrowserRouter>
+      <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/auth/:boxId" element={<AuthPage />} />
+            <Route path="/maker/intro" element={<MakerIntroPage />} />
+            <Route path="/maker/" element={<MakerHomePage />} />
+            <Route
+              path="/maker/publish/:boxId"
+              element={<MakerPublishPage />}
+            />
+            <Route path="/kukibox/:boxId/intro" element={<KukiIntroPage />} />
+            <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
+            <Route path="/kukibox/:boxId/make" element={<KukiBoxMakePage />} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider>
     </div>
   );
 }
