@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MakerIntroPage.css";
+import { useNavigate } from "react-router-dom";
 
 function MakerIntroPage() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/maker/");
+    }, 2000);
+  });
+
   return (
     <div className="maker_intro">
       <div className="maker_intro_title">
