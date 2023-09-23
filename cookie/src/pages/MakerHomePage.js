@@ -42,9 +42,7 @@ function MakerHome() {
       const { data } = await res.json();
       const { box_id } = data;
 
-      setTimeout(() => {
-        navigate("/maker/publish/" + box_id);
-      }, 3000);
+      navigate("/maker/publish/" + box_id);
     }
   };
 
