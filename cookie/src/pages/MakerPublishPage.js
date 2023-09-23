@@ -7,24 +7,35 @@ import { generateQR } from "../utils/generateQR";
 function MakerPublishPage() {
   const params = useParams();
 
-  const [qrDataUrl, setQrDataUrl] = React.useState(null);
+  const [audUrl, setAudUrl] = React.useState(null);
+  const [makerUrl, setMakerUrl] = React.useState(null);
 
   useEffect(() => {
-    const setKukiBoxUrl = async () => {
+    const setAudQrUrl = async () => {
       const { boxId } = params;
       if (!boxId) return;
 
       const url = `https://localhost:3000/kukibox/${boxId}/intro`;
       const qrDataUrl = await generateQR(url);
-      setQrDataUrl(qrDataUrl);
+      setAudUrl(qrDataUrl);
     };
 
-    setKukiBoxUrl();
+    const setMakerQrUrl = async () => {
+      const { boxId } = params;
+      if (!boxId) return;
+
+      const url = `https://localhost:3000/auth/${boxId}`;
+      const qrDataUrl = await generateQR(url);
+      setMakerUrl(qrDataUrl);
+    };
+
+    setAudQrUrl();
+    setMakerQrUrl();
   }, []);
 
   const onDownloadClick = () => {
     const downloadLink = document.createElement("a");
-    downloadLink.href = qrDataUrl;
+    downloadLink.href = audUrl;
     downloadLink.download = "qr.png";
     downloadLink.click();
   };
@@ -37,7 +48,7 @@ function MakerPublishPage() {
       <div className="qrbox">
         <div className="kuki_qrbox">
           <div className="kuki_qr">
-            <img src={qrDataUrl} />
+            <img src={audUrl} alt="aud-url-qr" />
           </div>
           <div className="kuki_qr_text">
             <div>관객 배포용</div>
@@ -47,8 +58,7 @@ function MakerPublishPage() {
         </div>
         <div className="maker_qrbox">
           <div className="maker_qr">
-            <img src={qrDataUrl} />
-            {/* 나중에 관계자용 qr발급해야함 */}
+            <img src={makerUrl} alt="maker-url-ar" />
           </div>
           <div className="maker_qr_text">제작자 열람용</div>
         </div>
