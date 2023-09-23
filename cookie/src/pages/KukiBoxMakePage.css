@@ -33,7 +33,24 @@
     width: 340px;
     height: 320px;
 
+    border-radius: 20px;
+
+    padding: 8px;
+
     background-color: #F6EDDD;
+}
+
+.content_section textarea {
+    width: 100%;
+    height: 100%;
+
+    font-family: HSYuJi;
+    border: none;
+    background: none;
+}
+
+.content_section textarea:focus {
+    outline: none;
 }
 
 .public_section {
