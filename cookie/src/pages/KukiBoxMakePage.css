@@ -7,7 +7,7 @@
     background-color: hsl(27, 76%, 16%);
 }
 
-.page_header {
+.KukiBoxMakePage .page_header {
     color: #F6EDDD;
     text-align: center;
     font-family: HSYuJi;
@@ -18,7 +18,7 @@
     letter-spacing: 0.75px;
 }
 
-.design_section {
+.KukiBoxMakePage .design_section {
     margin-top: 25px;
 
     width: 390px;
@@ -32,7 +32,7 @@
     justify-content: space-evenly;
 }
 
-.content_section {
+.KukiBoxMakePage .content_section {
     margin-top: 32px;
     margin-left: 25px;
 
@@ -46,7 +46,7 @@
     background-color: #F6EDDD;
 }
 
-.content_section textarea {
+.KukiBoxMakePage .content_section textarea {
     width: 100%;
     height: 100%;
 
@@ -55,23 +55,23 @@
     background: none;
 }
 
-.content_section textarea:focus {
+.KukiBoxMakePage .content_section textarea:focus {
     outline: none;
 }
 
-.public_section {
+.KukiBoxMakePage .public_section {
     margin-top: 13px;
 
     height: 20px;
 }
 
-.public_section {
+.KukiBoxMakePage .public_section {
     margin-top: 16px;
 
     width: 380px;
 }
 
-.public_section input {
+.KukiBoxMakePage .public_section input {
     margin-left: 145px;
 
     width: 16px;
@@ -81,7 +81,7 @@
     border: none;
 }
 
-.public_section span {
+.KukiBoxMakePage .public_section span {
     margin-left: 32px;
 
     color: #FFF;
@@ -93,7 +93,7 @@
     line-height: normal;
 }
 
-.button_section {
+.KukiBoxMakePage .button_section {
     margin-left: 66px;
     margin-top: 12px;
 
@@ -104,7 +104,7 @@
     background: #75BEDA;    
 }
 
-.button_section button {
+.KukiBoxMakePage .button_section button {
     width: 100%;
     height: 100%;
 

@@ -1,21 +1,18 @@
 .MakerHomePage {
   text-align: center;
-  display: flex;
   background: #F6EDDD80;
   width: 390px;
   height: 844px;
+
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
-.MakerHomePage textarea {
-  padding-top: 20px;
-  padding-left: 20px;
-}
+.MakerHomePage .page_header {
+  margin-top: 128px;
 
-.page_header {
-  color: #623B1C!important;
+  color: #623B1C;
   text-align: center;
   font-family: HSYuJi;
   font-size: 30px;
@@ -23,11 +20,16 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.9px;
-  position: absolute;
-  top: 128px;
 }
 
-.title_header {
+.MakerHomePage textarea {
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.MakerHomePage .title_header {
+  margin-top: 80px;
+
   color: #623B1C;
   text-align: center;
   font-family: HSYuJi;
@@ -36,19 +38,18 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
-  position: absolute;
-  top: 238px;
 }
-.title_section {
+
+.MakerHomePage .title_section {
+  margin-top: 19px;
+
   width: 268px;
   height: 55px;
-  flex-shrink: 0;
+
   border-radius: 20px;
   background: #CAAD8C;
-  position: absolute;
-  top: 272px;
 }
-.title_section textarea {
+.MakerHomePage .title_section textarea {
   width: 100%;
   height: 100%;
 
@@ -57,10 +58,12 @@
   background: none;
 }
 
-.title_section textarea:focus {
+.MakerHomePage .title_section textarea:focus {
   outline: none;
 }
-.link_header {
+.MakerHomePage .link_header {
+  margin-top: 35px;
+
   color: #623B1C;
   text-align: center;
   font-family: HSYuJi;
@@ -69,20 +72,18 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
-  position: absolute;
-  top: 362px;
 }
-.link_section {
+.MakerHomePage .link_section {
+  margin-top: 19px;
+
   width: 268px;
   height: 55px;
   flex-shrink: 0;
   border-radius: 20px;
   background: #CAAD8C;
-  position: absolute;
-  top: 512px;
 }
 
-.link_section textarea {
+.MakerHomePage .link_section textarea {
   width: 100%;
   height: 100%;
 
@@ -91,10 +92,12 @@
   background: none;
 }
 
-.link_section textarea:focus {
+.MakerHomePage .link_section textarea:focus {
   outline: none;
 }
-.info_header {
+.MakerHomePage .info_header {
+  margin-top: 35px;
+
   color: #623B1C;
   text-align: center;
   font-family: HSYuJi;
@@ -103,20 +106,18 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
-  position: absolute;
-  top: 482px;
 }
-.info_section {
+.MakerHomePage .info_section {
+  margin-top: 19px;
+
   width: 268px;
   height: 55px;
   flex-shrink: 0;
   border-radius: 20px;
   background: #CAAD8C;
-  position: absolute;
-  top: 396px;
 }
 
-.info_section textarea {
+.MakerHomePage .info_section textarea {
   width: 100%;
   height: 100%;
 
@@ -125,36 +126,32 @@
   background: none;
 }
 
-.info_section textarea:focus {
+.MakerHomePage .info_section textarea:focus {
   outline: none;
 }
 
-.button_section {
+.MakerHomePage .button_section {
+  margin-top: 105px;
+
   width: 268px;
   height: 55px;
-  flex-shrink: 0;
+
   border-radius: 20px;
   background: #75BEDA;
-  position: absolute;
-  top: 672px;
-  z-index: 2;
-  
+
+  display: flex;
+  justify-content: center;
 }
-.button_section button {
+.MakerHomePage .button_section button {
   color: #FFFFFF;
-  text-align: center;
   font-family: HSYuJi;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
-  position: absolute;
-  top: 680px;
 
   border: none;
   background: none;
-
-  z-index: 1;
 }
 
