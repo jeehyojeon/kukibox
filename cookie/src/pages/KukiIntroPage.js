@@ -1,7 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./KukiIntroPage.css";
+import { useNavigate, useParams } from "react-router-dom";
 
 function KukiIntroPage() {
+  const params = useParams();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const { boxId } = params;
+    if (!boxId) return;
+    setTimeout(() => {
+      navigate(`/kukibox/${boxId}`);
+    }, 2400);
+  }, []);
+
   return (
     <div className="kuki_home">
       <div className="kuki_subtitle">공연 방명록 서비스</div>
