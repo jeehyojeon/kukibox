@@ -54,12 +54,18 @@
     flex-shrink: 0;
 
     background-image: url('../assets//images//LeftButton.svg');
-
+    
     border: none;
     background-color: transparent;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+.kukibox_button .right_button {
+    transform: rotate(180deg);
+}
+
+
 
 .make_button_section {
     width: 390px;
