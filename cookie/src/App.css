@@ -24,3 +24,15 @@
        url('https://cdn.jsdelivr.net/gh/webfontworld/HSYuJi/HSYuJi.ttf') format("truetype");
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'LotteriaChab';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.ttf') format("truetype");
+  font-display: swap;
+} 

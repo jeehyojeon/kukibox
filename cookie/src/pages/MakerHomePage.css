@@ -1,20 +1,4 @@
-@font-face {
-  font-family: 'LotteriaChab';
-  font-weight: normal;
-  font-style: normal;
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot');
-  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot?#iefix') format('embedded-opentype'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff2') format('woff2'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff') format('woff'),
-      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.ttf') format("truetype");
-  font-display: swap;
-} 
-@font-face {
-  font-family: 'HSYeolumMulbit';
-  src: url('../assets/fonts/HSYeolumMulbit.ttf');
-}
-
-.maker_home {
+.MakerHomePage {
   text-align: center;
   display: flex;
   background: #F6EDDD80;
@@ -25,24 +9,23 @@
   justify-content: center;
 }
 
-.maker_home_title {
-  color: #623B1C;
+.page_header {
+  color: #623B1C!important;
   text-align: center;
-  font-family: HSYeolumMulbit;
+  font-family: HSYuJi;
   font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.9px;
-  white-space: pre-line;
   position: absolute;
   top: 128px;
 }
 
-.maker_home_name {
+.title_header {
   color: #623B1C;
   text-align: center;
-  font-family: HSYeolumMulbit;
+  font-family: HSYuJi;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
@@ -51,7 +34,7 @@
   position: absolute;
   top: 238px;
 }
-.maker_home_namebox {
+.title_section {
   width: 268px;
   height: 55px;
   flex-shrink: 0;
@@ -60,7 +43,31 @@
   position: absolute;
   top: 272px;
 }
-.maker_home_linkbox {
+.title_section textarea {
+  width: 100%;
+  height: 100%;
+
+  font-family: HSYuJi;
+  border: none;
+  background: none;
+}
+
+.title_section textarea:focus {
+  outline: none;
+}
+.link_header {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYuJi;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  position: absolute;
+  top: 362px;
+}
+.link_section {
   width: 268px;
   height: 55px;
   flex-shrink: 0;
@@ -69,7 +76,32 @@
   position: absolute;
   top: 512px;
 }
-.maker_home_optionbox {
+
+.link_section textarea {
+  width: 100%;
+  height: 100%;
+
+  font-family: HSYuJi;
+  border: none;
+  background: none;
+}
+
+.link_section textarea:focus {
+  outline: none;
+}
+.info_header {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYuJi;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  position: absolute;
+  top: 482px;
+}
+.info_section {
   width: 268px;
   height: 55px;
   flex-shrink: 0;
@@ -80,44 +112,22 @@
 
 }
 
-.maker_home_link {
-  color: #623B1C;
-  text-align: center;
-  font-family: HSYeolumMulbit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.45px;
-  position: absolute;
-  top: 362px;
-}
-.maker_home_option {
-  color: #623B1C;
-  text-align: center;
-  font-family: HSYeolumMulbit;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.45px;
-  position: absolute;
-  top: 482px;
+.info_section textarea {
+  width: 100%;
+  height: 100%;
+
+  font-family: HSYuJi;
+  border: none;
+  background: none;
 }
 
-.maker_home_enroll {
-  color: #FFFFFF;
-  text-align: center;
-  font-family: HSYeolumMulbit;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  letter-spacing: 0.45px;
-  position: absolute;
-  top: 680px;
+.info_section textarea:focus {
+  outline: none;
 }
-.maker_home_enrollbox {
+
+
+
+.button_section {
   width: 268px;
   height: 55px;
   flex-shrink: 0;
@@ -125,17 +135,24 @@
   background: #75BEDA;
   position: absolute;
   top: 672px;
+  z-index: 2;
   
 }
+.button_section button {
+  color: #FFFFFF;
+  text-align: center;
+  font-family: HSYuJi;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.45px;
+  position: absolute;
+  top: 680px;
 
-input {
-  background: transparent;
   border: none;
+  background: none;
+
+  z-index: 1;
 }
 
-textarea {
-  background: transparent;
-  border: none;
-  resize: none;
-  
-}
