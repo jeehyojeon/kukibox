@@ -1,39 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./MakerIntroPage.css";
-import MakerIntroKuki from "../assets/images/kuki1_front.svg";
-import MakerIntroBox from "../assets/images/MakerIntroBox.svg";
+import { useNavigate } from "react-router-dom";
 
 function MakerIntroPage() {
-  const kukipos = {
-    position: "absolute",
-    top: "50px",
-    left: "220px",
-  };
-  const boxpos = {
-    position: "absolute",
-    top: "397px",
-    left: "45px",
-  };
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/maker/");
+    }, 2000);
+  });
 
   return (
     <div className="maker_intro">
-      <span className="maker_intro_title">
+      <div className="maker_intro_title">
         쿠키박스
-        <span className="maker_intro_kuki">
-          <img
-            src={MakerIntroKuki}
-            alt="MakerIntroKuki"
-            width={30}
-            height={30}
-            style={kukipos}
-          />
-        </span>
-      </span>
+        <div className="maker_intro_kuki"></div>
+      </div>
       <div className="maker_intro_subbox"></div>
       <div className="maker_intro_subtitle">공연 관계자용</div>
-      <div className="maker_intro_box">
-        <img src={MakerIntroBox} alt="MakerIntroBox" style={boxpos} />
-      </div>
+      <div className="maker_intro_box"></div>
     </div>
   );
 }
