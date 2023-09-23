@@ -1,9 +1,9 @@
 import React from "react";
 import "./App.css";
 
-import MakerHome from "./pages/MakerHome.js";
-import AudIntro from "./pages/AudIntro";
-import MakerIntro from "./pages/MakerIntro";
+import MakerHomePage from "./pages/MakerHomePage.js";
+import MakerIntroPage from "./pages/MakerIntroPage";
+import MakerPublishPage from "./pages/MakerPublishPage";
 import KukiBoxHomePage from "./pages/KukiBoxHomePage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -14,8 +14,9 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<MakerHome />} />
-          <Route path="/audintro" element={<AudIntro />} />
-          <Route path="/makerintro" element={<MakerIntro />} />
+          <Route path="/" element={<MakerHomePage />} />
+          <Route path="/makerintro" element={<MakerIntroPage />} />
+          <Route path="/makerpublish" element={<MakerPublishPage />} />
           <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
         </Routes>
       </BrowserRouter>

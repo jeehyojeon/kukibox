@@ -25,6 +25,20 @@
   justify-content: center;
 }
 
+.maker_home_title {
+  color: #623B1C;
+  text-align: center;
+  font-family: HSYeolumMulbit;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  white-space: pre-line;
+  position: absolute;
+  top: 128px;
+}
+
 .maker_home_name {
   color: #623B1C;
   text-align: center;
@@ -34,6 +48,8 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
+  position: absolute;
+  top: 238px;
 }
 .maker_home_namebox {
   width: 268px;
@@ -41,6 +57,8 @@
   flex-shrink: 0;
   border-radius: 20px;
   background: #CAAD8C;
+  position: absolute;
+  top: 272px;
 }
 .maker_home_linkbox {
   width: 268px;
@@ -48,6 +66,8 @@
   flex-shrink: 0;
   border-radius: 20px;
   background: #CAAD8C;
+  position: absolute;
+  top: 512px;
 }
 .maker_home_optionbox {
   width: 268px;
@@ -55,15 +75,11 @@
   flex-shrink: 0;
   border-radius: 20px;
   background: #CAAD8C;
+  position: absolute;
+  top: 392px;
+
 }
-.maker_home_enrollbox {
-  width: 268px;
-  height: 55px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: #75BEDA;
-  
-}
+
 .maker_home_link {
   color: #623B1C;
   text-align: center;
@@ -73,6 +89,8 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
+  position: absolute;
+  top: 362px;
 }
 .maker_home_option {
   color: #623B1C;
@@ -83,6 +101,8 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 0.45px;
+  position: absolute;
+  top: 482px;
 }
 
 .maker_home_enroll {
@@ -95,6 +115,15 @@
   line-height: normal;
   letter-spacing: 0.45px;
   position: absolute;
+  top: 680px;
+}
+.maker_home_enrollbox {
+  width: 268px;
+  height: 55px;
+  flex-shrink: 0;
+  border-radius: 20px;
+  background: #75BEDA;
+  position: absolute;
   top: 672px;
-  margin: 0;
+  
 }

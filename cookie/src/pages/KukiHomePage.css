@@ -1,0 +1,123 @@
+@font-face {
+  font-family: 'LotteriaChab';
+  font-weight: normal;
+  font-style: normal;
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot');
+  src: url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.eot?#iefix') format('embedded-opentype'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff2') format('woff2'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.woff') format('woff'),
+      url('https://cdn.jsdelivr.net/gh/webfontworld/LotteriaChab/LotteriaChab.ttf') format("truetype");
+  font-display: swap;
+} 
+
+.kuki_home {
+  text-align: center;
+  background: #75BEDA;
+  width: 390px;
+  height: 844px;
+  
+}
+
+.kuki_subtitle {
+  color: #F6EDDD;
+  text-align: center;
+  font-family: 'LOTTERIACHAB';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.6px;
+  text-shadow: -1px 0 #623B1C, 0 1px #623B1C, 1px 0 #623B1C, 0 -1px #623B1C;
+  position: absolute;
+  top: 360px;
+  left: 112px;
+}
+
+.kuki_title {
+  color: #623B1C;
+  text-align: center;
+  font-family: 'LOTTERIACHAB';
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  position: absolute;
+  top: 389px;
+  left: 98px;
+  text-shadow: -3px 0 #F6EDDD, 0 3px #F6EDDD, 3px 0 #F6EDDD, 0 -3px #F6EDDD;
+}
+
+
+
+.kuki_box_left {
+  width: 3px;
+  height: 623px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 110px;
+  left: 66px;
+}
+
+.kuki_box_right {
+  width: 3px;
+  height: 623px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 110px;
+  left: 321px;
+}
+
+.kuki_box_top {
+  width: 258px;
+  height: 3px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 110px;
+  left: 66px;
+}
+
+.kuki_box_bottom {
+  width: 258px;
+  height: 3px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 733px;
+  left: 66px;
+}
+
+.kuki_box_diagleft {
+  width: 66px;
+  height: 110px;
+  background: #F6EDDD;
+  clip-path: polygon(0% 0%, 4% 0%, 100% 100%, 96% 100%);
+}
+
+.kuki_box_diagright {
+  width: 66px;
+  height: 110px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 0px;
+  left: 324px;
+  clip-path: polygon(96% 0%, 100% 0%, 4% 100%, 0% 100%);
+}
+
+.kuki_box_diagleft2 {
+  width: 66px;
+  height: 110px;
+  background: #F6EDDD;
+  position: absolute;
+  top: 733px;
+  clip-path: polygon(96% 0%, 100% 0%, 4% 100%, 0% 100%);
+}
+
+.kuki_box_diagright2 {
+  width: 66px;
+  height: 110px;
+  background: #F6EDDD;
+  clip-path: polygon(0% 0%, 4% 0%, 100% 100%, 96% 100%);
+  position: absolute;
+  top: 733px;
+  left: 324px;
+}
