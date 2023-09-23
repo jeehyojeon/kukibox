@@ -13,10 +13,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MakerHome />} />
-          <Route path="/" element={<MakerHomePage />} />
-          <Route path="/makerintro" element={<MakerIntroPage />} />
-          <Route path="/makerpublish" element={<MakerPublishPage />} />
+          <Route path="/maker/" element={<MakerHomePage />} />
+          <Route path="/maker/intro" element={<MakerIntroPage />} />
+          <Route path="/maker/publish" element={<MakerPublishPage />} />
           <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
         </Routes>
       </BrowserRouter>
