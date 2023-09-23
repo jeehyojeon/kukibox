@@ -1,4 +1,4 @@
-.page {
+.KukiBoxHomePage {
     width: 390px;
     height: 844px;
 
@@ -14,6 +14,7 @@
 
     border: 3px solid #49260A;
 
+
     background-image: url('../assets/images/Kukibox_Home.svg');
 }
 
@@ -23,6 +24,9 @@
 
     width: 260px;
     height: 494px;
+
+    padding-left: 12px;
+    padding-right: 12px;
 
     display: flex;
     flex-wrap: wrap;

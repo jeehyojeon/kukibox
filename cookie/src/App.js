@@ -6,6 +6,7 @@ import MakerIntroPage from "./pages/MakerIntroPage";
 import MakerPublishPage from "./pages/MakerPublishPage1";
 import KukiBoxHomePage from "./pages/KukiBoxHomePage";
 import KukiIntroPage from "./pages/KukiIntroPage";
+import KukiBoxMakePage from "./pages/KukiBoxMakePage";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/maker/publish" element={<MakerPublishPage />} />
           <Route path="/kukibox/intro" element={<KukiIntroPage />} />
           <Route path="/kukibox/:boxId" element={<KukiBoxHomePage />} />
+          <Route path="/kukibox/:boxId/make" element={<KukiBoxMakePage />} />
         </Routes>
       </BrowserRouter>
     </div>
