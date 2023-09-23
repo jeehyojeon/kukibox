@@ -5,7 +5,7 @@
     perspective: 1000px; /* 3D 회전 효과를 위한 투시 거리 설정 */
 }
 
-.front, .back {
+.kuki-front, .kuki-back {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,20 +15,20 @@
     transition: transform 0.6s; /* 애니메이션 시간 설정 */
 }
 
-.front {
+.kuki-front {
     z-index: 10;
     transform: rotateY(0deg); /* 초기 상태: 정면 보기 */
 }
 
-.back {
+.kuki-back {
     z-index: -10;
     transform: rotateY(180deg); /* 초기 상태: 뒷면 보기 */
 }
 
-.isFlipped .front {
+.isFlipped .kuki-front {
     transform: rotateY(-180deg); /* 뒷면 보기로 회전 */
 }
 
-.isFlipped .back {
+.isFlipped .kuki-back {
     transform: rotateY(0deg); /* 정면 보기로 회전 */
 }

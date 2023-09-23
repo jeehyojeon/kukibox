@@ -20,7 +20,7 @@ function KukiBoxHomePage() {
         isFlipped: false,
       }));
 
-      setKukies([...kukies]);
+      setKukies([...kukies].slice(0, 8));
     };
 
     getKukiList();

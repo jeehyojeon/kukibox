@@ -3,14 +3,18 @@ import React, { useState } from "react";
 import "./KukiBoxMakePage.css";
 
 import KukiDesign from "../components/KukiDesign/KukiDesign";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import Onboarding from "../components/Onboarding/Onboarding";
 
 function KukiBoxMakePage() {
   const params = useParams();
+  const navigate = useNavigate();
 
   const [content, setContent] = useState("");
   const [isPrivate, setIsPrivate] = useState(false);
   const [selected, setSelected] = useState(1);
+
+  const [isOnboarding, setIsOnboarding] = useState(false);
 
   const onContentChange = (event) => {
     setContent(event.target.value);
@@ -37,7 +41,12 @@ function KukiBoxMakePage() {
     });
 
     // onboarding
-    // navigate to home
+    setIsOnboarding(true);
+
+    // navigate to home after 2.5 seconds
+    setTimeout(() => {
+      navigate("/kukibox/" + boxId);
+    }, 5500);
   };
 
   return (
@@ -68,6 +77,7 @@ function KukiBoxMakePage() {
       <div className="button_section hoverable">
         <button onClick={onMakeClick}>쿠키 보내기</button>
       </div>
+      {isOnboarding && <Onboarding design={selected} />}
     </div>
   );
 }
