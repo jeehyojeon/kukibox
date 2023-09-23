@@ -1,9 +1,34 @@
 .kuki {
     width: 110px;
-    height: 100px;
+    height: 110px;
+    position: relative;
+    perspective: 1000px; /* 3D 회전 효과를 위한 투시 거리 설정 */
+}
 
-    background-size: contain;
-    background-repeat: no-repeat;
+.front, .back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* 뒷면 숨김 */
+    transition: transform 0.6s; /* 애니메이션 시간 설정 */
+}
 
+.front {
+    z-index: 10;
+    transform: rotateY(0deg); /* 초기 상태: 정면 보기 */
+}
 
+.back {
+    z-index: -10;
+    transform: rotateY(180deg); /* 초기 상태: 뒷면 보기 */
+}
+
+.isFlipped .front {
+    transform: rotateY(-180deg); /* 뒷면 보기로 회전 */
+}
+
+.isFlipped .back {
+    transform: rotateY(0deg); /* 정면 보기로 회전 */
 }
