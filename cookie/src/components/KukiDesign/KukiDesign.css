@@ -9,9 +9,12 @@
     align-items: center;
 }
 
-
 .blank {
     background-color: #75BEDA;
+}
+
+.selected {
+    border: #75BEDA 4px solid;
 }
 
 .kuki_design img {
