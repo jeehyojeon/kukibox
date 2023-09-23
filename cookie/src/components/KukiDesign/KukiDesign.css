@@ -1,0 +1,17 @@
+.design_container {
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    background: #F6EDDD;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.kuki_design img {
+    width: 80px;
+    height: 80px;
+    
+    background-size: cover;
+}

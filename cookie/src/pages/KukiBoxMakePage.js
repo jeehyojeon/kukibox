@@ -2,6 +2,8 @@ import React, { useState } from "react";
 
 import "./KukiBoxMakePage.css";
 
+import KukiDesign from "../components/KukiDesign/KukiDesign";
+
 function KukiBoxMakePage() {
   const [content, setContent] = useState("");
   const [isPrivate, setIsPrivate] = useState(false);
@@ -21,7 +23,13 @@ function KukiBoxMakePage() {
   return (
     <div className="page">
       <div className="page_header">쿠키를 선택해 주세요!</div>
-      <div className="design_section"></div>
+      <div className="design_section">
+        {
+          [1, 2, 3, 4, 5].map((design) => (
+            <KukiDesign design={design} />
+          )) /* TODO: design 선택 기능 */
+        }
+      </div>
       <div className="content_section">
         <textarea
           className="content_textarea"
