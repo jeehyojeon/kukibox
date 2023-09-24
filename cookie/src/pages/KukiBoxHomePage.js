@@ -67,15 +67,11 @@ function KukiBoxHomePage() {
   };
 
   const onRightClick = () => {
-    if (curBox + 1 > Math.ceil((kukies.length - 1) / 8)) return;
-
-    setCurBox(curBox + 1);
+    setCurBox(Math.min(curBox + 1, Math.ceil((kukies.length - 1) / 8)));
   };
 
   const onLeftClick = () => {
-    if (curBox - 1 > 0) return;
-
-    setCurBox(curBox - 1);
+    setCurBox(Math.max(curBox - 1, 0));
   };
 
   const onKukiMakeClick = () => {
@@ -108,7 +104,7 @@ function KukiBoxHomePage() {
             className="left_button hoverable"
             onClick={onLeftClick}></button>
           {kukies.length
-            ? `${curBox + 1} / ${Math.ceil((kukies.length - 1) / 8)}`
+            ? `${curBox + 1} / ${Math.ceil((kukies.length - 1) / 8) + 1}`
             : ""}
           <button
             className="right_button hoverable"
