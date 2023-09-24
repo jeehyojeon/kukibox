@@ -10,12 +10,14 @@ function MakerPublishPage() {
   const [audUrl, setAudUrl] = React.useState(null);
   const [makerUrl, setMakerUrl] = React.useState(null);
 
+  const publishUrl = "https://boisterous-seahorse-4f5cb9.netlify.app";
+
   useEffect(() => {
     const setAudQrUrl = async () => {
       const { boxId } = params;
       if (!boxId) return;
 
-      const url = `https://devbuzz142.github.io/kukibox/${boxId}/intro`;
+      const url = publishUrl + `/kukibox/${boxId}/intro`;
       const qrDataUrl = await generateQR(url);
       setAudUrl(qrDataUrl);
     };
@@ -24,7 +26,7 @@ function MakerPublishPage() {
       const { boxId } = params;
       if (!boxId) return;
 
-      const url = `https://devbuzz142.github.io/auth/${boxId}`;
+      const url = publishUrl + `/auth/${boxId}`;
       const qrDataUrl = await generateQR(url);
       setMakerUrl(qrDataUrl);
     };

@@ -18,7 +18,7 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path="/" element={<MakerHomePage />} />
+            <Route path="/" element={<MakerIntroPage />} />
             <Route path="/auth/:boxId" element={<AuthPage />} />
             <Route path="/maker/intro" element={<MakerIntroPage />} />
             <Route path="/maker/" element={<MakerHomePage />} />
