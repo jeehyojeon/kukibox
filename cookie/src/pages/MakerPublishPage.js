@@ -15,7 +15,7 @@ function MakerPublishPage() {
       const { boxId } = params;
       if (!boxId) return;
 
-      const url = `https://13.48.45.97:3000/kukibox/${boxId}/intro`;
+      const url = `https://devbuzz142.github.io/kukibox/${boxId}/intro`;
       const qrDataUrl = await generateQR(url);
       setAudUrl(qrDataUrl);
     };
@@ -24,7 +24,7 @@ function MakerPublishPage() {
       const { boxId } = params;
       if (!boxId) return;
 
-      const url = `https://13.48.45.97:3000/auth/${boxId}`;
+      const url = `https://devbuzz142.github.io/auth/${boxId}`;
       const qrDataUrl = await generateQR(url);
       setMakerUrl(qrDataUrl);
     };
