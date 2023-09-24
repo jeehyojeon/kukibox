@@ -17,7 +17,9 @@ function KukiBoxHomePage() {
 
   useEffect(() => {
     const getKukiList = async () => {
-      const response = await fetch(`http://localhost:3030/box/${boxId}/kukies`);
+      const response = await fetch(
+        `http://13.48.45.97:3030/box/${boxId}/kukies`
+      );
       const data = await response.json();
       const kukies = data.map((kuki) => ({
         id: kuki.id,
@@ -46,7 +48,7 @@ function KukiBoxHomePage() {
     });
     setKukies(newKukies);
 
-    const response = await fetch(`http://localhost:3030/kuki/${kukiId}`);
+    const response = await fetch(`http://13.48.45.97:3030/kuki/${kukiId}`);
     const data = await response.json();
     const kuki = data[0];
 

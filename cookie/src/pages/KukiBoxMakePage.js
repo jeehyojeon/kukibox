@@ -27,7 +27,7 @@ function KukiBoxMakePage() {
   const onMakeClick = async () => {
     const { boxId } = params;
 
-    const res = await fetch(`http://localhost:3030/kuki`, {
+    const res = await fetch(`http://13.48.45.97:3030/kuki`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
