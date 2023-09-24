@@ -23,7 +23,7 @@ function MakerHome() {
   };
 
   const onMakeClick = async () => {
-    const res = await fetch(`http://13.53.126.253:3030/box`, {
+    const res = await fetch(`https://13.53.126.253:3030/box`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

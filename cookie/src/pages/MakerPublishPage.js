@@ -10,7 +10,7 @@ function MakerPublishPage() {
   const [audUrl, setAudUrl] = React.useState(null);
   const [makerUrl, setMakerUrl] = React.useState(null);
 
-  const publishUrl = "https://boisterous-seahorse-4f5cb9.netlify.app";
+  const publishUrl = "https://www.numanku.com";
 
   useEffect(() => {
     const setAudQrUrl = async () => {
